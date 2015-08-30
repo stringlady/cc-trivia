@@ -203,7 +203,7 @@
         plugin.method = {
             // Sets up the questions and answers based on above array
             setupQuiz: function(options) { // use 'options' object to pass args
-            
+
                 var key, keyNotch, kN;
                 key = internal.method.getKey (3); // how many notches == how many jQ animations you will run
                 keyNotch = internal.method.getKeyNotch; // a function that returns a jQ animation callback function
@@ -491,10 +491,22 @@
                     } else {
                         questionLI.addClass(completeClass);
                     }
-                    questionLI.find('input').prop('disabled', true);
-                    questionLI.find(_responses).show();
+                    questionLI.find(_responses).fadeIn(3000, kN(key,1));
+                    questionLI.find(_responses).append('<img class="burst" src="Images/kasteroids-icon.png" height="64px" width="64px">');
                     questionLI.find(_nextQuestionBtn).fadeIn(300, kN(key,1));
                     questionLI.find(_prevQuestionBtn).fadeIn(300, kN(key,2));
+                    $('.burst').imgExplosion({
+                       angle:true,
+                       centerOn:Document.window,
+                       interval:2,
+                       minThrow:500,
+                       maxThrow:1300,
+                       angle:true,
+                       explode: false,
+                       extraWidth:200,
+                       rotateSpeed:30
+                    });
+                    $('.burst').remove();
                     if (!questionLI.find(_prevQuestionBtn).length) kN(key,2).apply (null, []); // 2nd notch on key must be passed even if there's no "back" button
                 } else {
                     kN(key,1).apply (null, []); // 1st notch on key must be on both sides of if/else, otherwise key won't turn
