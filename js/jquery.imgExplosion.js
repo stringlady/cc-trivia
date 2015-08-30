@@ -206,7 +206,7 @@
      */
     imgExplosion.defaults = {
         // path to the image to firework (only needed if not attached to an image olready on the page)
-         img: '/img/star.png',
+         img: './Images/kasteroids-icon.png',
         // set inPlace to true if you don't want the image to be thrown (just appear and explode/fade)
         inPlace:false,
         // how many miliseconds between throws

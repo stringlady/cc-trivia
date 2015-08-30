@@ -462,10 +462,24 @@
 
                 // Verify all/any true answers (and no false ones) were submitted
                 var correctResponse = plugin.method.compareAnswers(trueAnswers, selectedAnswers, selectAny);
-				
+
 				if(!correctResponse) {
 					// Jiggle like you're mad!
 					$(".quizArea").effect("shake");
+          $(".quizArea").append("<img class='burst' src='./Images/kasteroids-icon.png'");
+          $('.burst').imgExplosion({
+              angle:true,
+              centerOn:Document.window,
+              interval:2,
+              minThrow:500,
+              maxThrow:1300,
+              angle:true,
+              explode: false,
+              extraWidth:200,
+              rotateSpeed:30
+          });
+          $(".burst").remove();
+
 				}
 
                 if (correctResponse) {
