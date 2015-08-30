@@ -15,16 +15,15 @@ var quizJSON = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "What number is the letter A in the English alphabet?",
+            "q": "How many fingers do I have?",
             "a": [
                 {"option": "8",      "correct": false},
                 {"option": "14",     "correct": false},
-                {"option": "1",      "correct": true},
+                {"option": "5",      "correct": true},
                 {"option": "23",     "correct": false} // no comma here
             ],
             "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
-            "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>", // no comma here
-            "level": "1"
+            "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Which of the following best represents your preferred breakfast?",
@@ -36,8 +35,7 @@ var quizJSON = {
             ],
             "select_any": true,
             "correct": "<p><span>Nice!</span> Your cholestoral level is probably doing alright.</p>",
-            "incorrect": "<p><span>Hmmm.</span> You might want to reconsider your options.</p>", // no comma here
-            "level": "2"
+            "incorrect": "<p><span>Hmmm.</span> You might want to reconsider your options.</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "Where are you right now? Select ALL that apply.",
