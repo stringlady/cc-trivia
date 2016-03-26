@@ -1,0 +1,89 @@
+√// Setup your quiz text and questions here
+
+// NOTE: pay attention to commas, IE struggles with those bad boys
+<script>
+var quizJSON = {
+    "info": {
+    "name": "Peas on Earth",
+    "main": "<p>Here is a quiz of obesity,fast food vs Homemade food, and health!</p>",
+    "results": "<h5>Learn More</h5><p>When you find your score!bbx,nmm </p>",
+    "level1": "Health Expert",
+    "level2": "Health Contender",
+    "level3": "Health Amateur",
+    "level4": "Stay in school, kid...",
+    //nocommahere
+    },
+    "questions":[
+    {
+        //Question1-MultipleChoice,SingleTrueAnswer
+        "q": "What are the benefits of making food at home vs buying them at fast food restaurants?",
+        "a": [
+            {
+                "option": "You know exactly what is going into your food",
+                "correct": false
+            },
+            {
+                "option": "Is fresher and tastes better",
+                "correct": false
+            },
+            {
+                "option": "You can choose how it is being prepared?",
+                "correct": false
+            },
+            {
+                "option": "All of the above",
+                "correct": true
+            }//nocommahere
+        ],
+        "correct": "<p><span>That's right!</span> </p>",
+        "incorrect": "<p><span>Uhh no.</span><p>"//nocommahere
+    },
+    {
+        //Question2-MultipleChoice,SingleTrueAnswer
+        "q": "On average, how many more calories are there in a Big Mac than in a homemade burger?",
+        "a": [
+            {
+                "option": "207 calories",
+                "correct": false
+            },
+            {
+                "option": "165 calories",
+                "correct": true
+            },
+            {
+                "option": "120 calories",
+                "correct": false
+            },
+            {
+                "option": "180 calories",
+                "correct": false
+            }//nocommahere
+        ],
+        "select_any": true,
+        "correct": "<p><span>Awesome!</span></p>",
+        "incorrect": "<p><span>Hmmm.</span> You might want to reconsider your options.</p>"//nocommahere
+    },
+    {
+        //Question3-MultipleChoice,SingleTrueAnswer
+        "q": "When buying a meal for a family of four, it is cheaper to buy food at a grocery store instead of a fast food resturant?",
+        "a": [
+            {
+                "option": "True",
+                "correct": true
+            },
+            {
+                "option": "False",
+                "correct": false
+            }//nocommahere
+        ],
+        "correct": "<p><span>Yup.</span></p>",
+        //You'reseriouslyagenius,(wo)man.
+            "incorrect": "<p><span>NotQuite.</span></p>", // no comma here
+    }
+       ]
+       
+
+   };
+
+</script>            
+    
